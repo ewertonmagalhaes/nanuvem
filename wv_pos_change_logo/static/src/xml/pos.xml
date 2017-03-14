@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="Chrome">
+        <t t-jquery='.pos-logo' t-operation='replace'>
+        	<t t-if="widget.pos.config">
+            <img class="pos-logo" t-attf-src="/web/image/pos.config/#{widget.pos.config.id}/image"></img>  
+            </t>
+        </t>
+    </t>
+        <t t-extend="PosTicket">
+        	<t t-jquery='.pos-center-align' t-operation='before'>
+        		<t t-if="widget.pos.config">
+        			<div class="pos-center-align">
+	            		<img class="pos-logo" t-attf-src="/web/image/pos.config/#{widget.pos.config.id}/image"></img>  
+	            	</div>
+	            </t>
+	        </t>
+	    </t>
+        		
+</templates>
